@@ -1,0 +1,252 @@
+/* --------- Summer Theme & Base Styles --------- */
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #FFFAE5;
+    /* Tüm sayfalarda ortak zemin rengi */
+    color: #004466;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html {
+    overflow-y: scroll;
+    /* Scroll bar sabit alanda dursun */
+}
+
+
+.navbar a,
+.about-text h1,
+.projects h2,
+.resume h2,
+.certificate-info h3,
+.contact h2 {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* --------- Navbar --------- */
+nav {
+    background-color: #008CBA;
+    padding: 1em 0;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: #005B99;
+    margin-bottom: 30px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #004466;
+    background-color: #E6F7FF;
+    margin-top: 60px;
+}
+
+.navbar {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a:hover {
+    color: #FFD700;
+    transition: 0.3s ease;
+}
+
+.navbar li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* --------- About Section --------- */
+.about {
+    padding: 80px 40px 40px;
+    max-width: 900px;
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+}
+
+.tagline {
+    font-size: 20px;
+    color: #0077B6;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #FFD700;
+}
+
+.about-text h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* --------- Projects --------- */
+.projects {
+    padding: 40px;
+    max-width: 900px;
+    margin: auto;
+    /* ÖNCE: background-color: #FFE4B5; vardı — KALDIRILDI */
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.project-info h3 {
+    color: #0077B6;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #008CBA;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* --------- Resume --------- */
+.resume {
+    padding: 40px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.resume-section {
+    margin-bottom: 30px;
+}
+
+.resume-section h3 {
+    border-left: 5px solid #008CBA;
+    padding-left: 10px;
+    color: #0077B6;
+    font-family: 'Poppins', sans-serif;
+}
+
+.resume-section ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.resume-section li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* --------- Certificates --------- */
+.certificates {
+    padding: 40px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.certificate-card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.certificate-info {
+    padding: 20px;
+}
+
+.certificate-info h3 {
+    color: #0077B6;
+}
+
+/* --------- Contact --------- */
+.contact {
+    padding: 80px 40px 40px;
+    /* NAVBAR'DAN UZAKLAŞTIRILDI */
+    max-width: 700px;
+    margin: auto;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.contact-form button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #008CBA;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.social-links {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.social-links a {
+    color: #0077B6;
+    text-decoration: none;
+    font-weight: bold;
+}
