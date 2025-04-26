@@ -21,55 +21,126 @@
         </ul>
     </nav>
 
-    <section class="resume">
-        <h2>Resume</h2>
 
-        <div class="resume-section">
-            <h3>Education</h3>
-            <ul>
-                <li><strong>Ankara Yıldırım Beyazıt University</strong> – B.Sc. in Computer Engineering
-                    (2021–Present)<br> GPA: 3.4/4.0</li>
-                <li><strong>Açı College Science High School</strong> – 2017–2021<br> GPA: 95.28</li>
-            </ul>
-        </div>
+    <main>
+        <section class="resume">
+            <h2>Resume</h2>
 
-        <div class="resume-section">
-            <h3>Experience</h3>
-            <ul>
-                <li><strong>Executive Board Member – Science and Technology Club, AYBU</strong> (Sep 2022 – Jun
-                    2023)<br>
-                    Organized technical events, supported website development, and led team coordination and
-                    decision-making processes.</li>
+            <div class="resume-cards">
 
-                <li><strong>Training – Ministry of Industry & Technology, Autonomous Driving Fundamentals</strong> (Nov
-                    2024 – Dec 2024)<br>
-                    Gained skills in vehicle modeling, ADAS systems, sensor fusion, perception, and deep learning-based
-                    control systems.</li>
+                <div class="resume-card full-width">
+                    <h3>Education</h3>
+                    <ul>
+                        <li><strong>Ankara Yıldırım Beyazıt University</strong> – B.Sc. in Computer Engineering
+                            (2021–Present)<br> GPA: 3.4/4.0</li>
+                        <li><strong>Açı College Science High School</strong> – 2017–2021<br> GPA: 95.28</li>
+                    </ul>
+                </div>
 
-                <li><strong>Training – Autonomous Driving Advanced Program (Ongoing)</strong> (Dec 2024 – Jun 2025)<br>
-                    In-depth training on system engineering, functional safety, and motion planning in autonomous
-                    vehicles.</li>
-            </ul>
-        </div>
+                <div class="resume-card full-width">
+                    <h3>Experience</h3>
+                    <ul>
+                        <li> <strong>Executive Board Member – Science and Technology Club, AYBU</strong> (Sep 2022 – Jun
+                            2023)
+                            <p class="experience-description">
+                                During the 2022-2023 term, I served as a member of the Executive Board of the Science
+                                and Technology Club. In this role, I was responsible for organizing events, coordinating
+                                team activities, and contributing to decision-making processes. Additionally, I played
+                                an active role in developing and coding the club’s website by providing technical
+                                support. This experience greatly enhanced my skills in teamwork and project management.
+                            </p>
+                        </li>
+                        <li>
+                            <strong>Course – Ministry of Industry & Technology, Autonomous Driving Fundamentals</strong>
+                            (Nov 2024 – Dec 2024)
+                            <p class="experience-description">
+                                As part of this course, I gained fundamental competencies in areas such as vehicle
+                                modeling, advanced driver assistance systems, sensor fusion, and state estimation. I
+                                developed technical skills in deep learning-based environment perception, motion
+                                planning, and control in autonomous vehicles. I also acquired knowledge in automotive
+                                systems engineering and functional safety.
+                            </p>
+                        </li>
 
-        <div class="resume-section">
-            <h3>Skills</h3>
-            <ul>
-                <li>Python (NumPy, SciPy) – Data analysis, numerical computing</li>
-                <li>Java – OOP principles and application development</li>
-                <li>C/C++ – System-level programming, SFML for game development</li>
-                <li>AI & ML – Deep learning, classification, neural networks</li>
-                <li>Game Engines – Unity, Unreal Engine (intermediate)</li>
-                <li>Web – HTML, CSS, JS, PHP, MySQL</li>
-                <li>Tools – Git, Android Studio, VS Code</li>
-                <li>Languages – Turkish (native), English (advanced), German (intermediate)</li>
-            </ul>
-        </div>
-    </section>
+                        <li>
+                            <strong>Program – Autonomous Driving Advanced Program (Ongoing)</strong> (Dec 2024 – Jun
+                            2025)
+                            <p class="experience-description">
+                                In this advanced training program, I am focusing on vehicle modeling, advanced driver
+                                assistance systems, sensor fusion, state estimation, deep learning, environment
+                                perception, and advanced motion planning and control in autonomous vehicles. The
+                                intensive program is expected to be completed by June 2025.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Skills + Languages Container -->
+                <div class="skills-languages-container">
+                    <div class="resume-card skills-card">
+                        <h3>Skills</h3>
+                        <ul>
+                            <li><img src="imgs/python.png" class="skill-icon"> Python (NumPy, SciPy) – Data analysis,
+                                numerical computing</li>
+                            <li><img src="imgs/java.png" class="skill-icon"> Java – OOP principles and application
+                                development</li>
+                            <li><img src="imgs/CC++.png" class="skill-icon"> C/C++ – System-level programming</li>
+                            <li><img src="imgs/Ai.png" class="skill-icon"> AI & ML – Deep learning, classification,
+                                neural networks</li>
+                            <li><img src="imgs/web.png" class="skill-icon"> Web – HTML, CSS, JS, PHP, MySQL</li>
+                            <li><img src="imgs/git.png" class="skill-icon"> Tools – Git, Android Studio, VS Code</li>
+
+                        </ul>
+                    </div>
+
+                    <div class="resume-card languages-card">
+                        <h3>Languages</h3>
+                        <ul>
+                            <li><img src="imgs/Türkiye.png" class="flag-icon"> Turkish – Native</li>
+                            <li><img src="imgs/ingiltere.png" class="flag-icon"> English – Advanced</li>
+                            <li><img src="imgs/almanya.png" class="flag-icon"> German – Intermediate</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+
 
     <footer>
         <p>&copy; 2025 Onur ÇOKYİĞİT | All rights reserved.</p>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var current = window.location.pathname.split("/").pop();
+
+            $('.navbar a').each(function () {
+                var link = $(this).attr('href');
+                if (link === current) {
+                    $(this).addClass('active');
+                }
+            });
+        });
+
+
+
+        $(document).ready(function () {
+            $("main").css("opacity", 0);
+            $("main").animate({ opacity: 1 }, 500);
+
+            $(".navbar a").click(function (event) {
+                event.preventDefault();
+                var newLocation = this.href;
+
+                $("main").animate({ opacity: 0 }, 500, function () {
+                    window.location = newLocation;
+                });
+            });
+        });
+    </script>
 
 </body>
 

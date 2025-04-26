@@ -21,44 +21,84 @@
         </ul>
     </nav>
 
-    <section class="projects">
-        <h2>My Projects</h2>
 
-        <div class="project-card">
-            <img src="imgs/FarmingManagementGame.png" alt="Project 1">
-            <div class="project-info">
-                <h3>Farming Management Game</h3>
-                <p>A simulation game where players manage agricultural resources strategically. Built using SFML, C, and
-                    XML.</p>
-                <p><strong>Technologies:</strong> C, SFML, XML</p>
-                <a href="https://github.com/OnurCokyigit/Farming-Management-Game" target="_blank">View on GitHub</a>
+    <main>
+
+        <section class="projects">
+            <h2>My Projects</h2>
+
+            <div class="project-card">
+                <img src="imgs/FarmingManagementGame.png" alt="Project 1">
+                <div class="project-info">
+                    <h3>Farming Management Game</h3>
+                    <p>A simulation game where players manage agricultural resources strategically. Built using SFML, C,
+                        and
+                        XML.</p>
+                    <p><strong>Technologies:</strong> C, SFML, XML</p>
+                    <a href="https://github.com/OnurCokyigit/Farming-Management-Game" class="github-btn"
+                        target="_blank">View on GitHub</a>
+                </div>
             </div>
-        </div>
-        <div class="project-card">
-            <img src="imgs/schedule-0.png" alt="Project 2">
-            <div class="project-info">
-                <h3>Automatic Course Planner</h3>
-                <p>A web application that generates course schedules using Angular and database integration. Developed
-                    as a team project using HTML, CSS, JS, and Angular.</p>
-                <p><strong>Technologies:</strong> Angular, HTML, CSS, JS</p>
-                <a href="https://github.com/OnurCokyigit/Automatic-Course-Planner" target="_blank">View on GitHub</a>
+            <div class="project-card">
+                <img src="imgs/schedule-0.png" alt="Project 2">
+                <div class="project-info">
+                    <h3>Automatic Course Planner</h3>
+                    <p>A web application that generates course schedules using Angular and database integration.
+                        Developed
+                        as a team project using HTML, CSS, JS, and Angular.</p>
+                    <p><strong>Technologies:</strong> Angular, HTML, CSS, JS</p>
+                    <a href="https://github.com/OnurCokyigit/Automatic-Course-Planner" class="github-btn"
+                        target="_blank">View on
+                        GitHub</a>
+                </div>
             </div>
-        </div>
-        <div class="project-card">
-            <img src="imgs/Biltek.png" alt="Project 3">
-            <div class="project-info">
-                <h3>Science and Technology Society Website</h3>
-                <p>Designed and developed a responsive website for the university club, focusing on usability, event
-                    display, and modern interface aesthetics.</p>
-                <p><strong>Technologies:</strong> HTML, CSS, Team Coordination</p>
-                <a href="https://www.aybubiltek.com/" target="_blank">Visit Website</a>
+            <div class="project-card">
+                <img src="imgs/Biltek.png" alt="Project 3">
+                <div class="project-info">
+                    <h3>Science and Technology Society Website</h3>
+                    <p>Designed and developed a responsive website for the university club, focusing on usability, event
+                        display, and modern interface aesthetics.</p>
+                    <p><strong>Technologies:</strong> HTML, CSS, Team Coordination</p>
+                    <a href="https://www.aybubiltek.com/" class="github-btn" target="_blank">Visit Website</a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+    </main>
+
 
     <footer>
         <p>&copy; 2025 Onur ÇOKYİĞİT | All rights reserved.</p>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var current = window.location.pathname.split("/").pop();
+
+            $('.navbar a').each(function () {
+                var link = $(this).attr('href');
+                if (link === current) {
+                    $(this).addClass('active');
+                }
+            });
+        });
+
+
+
+        $(document).ready(function () {
+            $("main").css("opacity", 0);
+            $("main").animate({ opacity: 1 }, 500);
+
+            $(".navbar a").click(function (event) {
+                event.preventDefault();
+                var newLocation = this.href;
+
+                $("main").animate({ opacity: 0 }, 500, function () {
+                    window.location = newLocation;
+                });
+            });
+        });
+    </script>
 
 </body>
 

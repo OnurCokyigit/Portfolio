@@ -21,32 +21,57 @@
         </ul>
     </nav>
 
-    <section class="contact">
-        <h2>Contact Me</h2>
 
-        <form class="contact-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+    <main>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+        <section class="contact">
+            <section class="contact">
+                <div class="contact-card">
+                    <h2>Contact Me</h2>
+                    <p>If you would like to get in touch, you can reach me via:</p>
+                    <a href="https://www.linkedin.com/in/onur-%C3%A7okyi%C4%9Fit-4797b1228/"
+                        target="_blank">LinkedIn</a> |
+                    <a href="https://github.com/OnurCokyigit" target="_blank">GitHub</a> |
+                    <a href="#">Email</a>
+                </div>
+            </section>
+        </section>
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+    </main>
 
-            <button type="submit">Send Message</button>
-        </form>
-
-        <div class="social-links">
-            <p>You can also reach me on:</p>
-            <a href="https://github.com/OnurCokyigit" target="_blank">GitHub</a> |
-            <a href="https://www.linkedin.com/in/onur-%C3%A7okyi%C4%9Fit-4797b1228/" target="_blank">LinkedIn</a>
-        </div>
-    </section>
 
     <footer>
         <p>&copy; 2025 Onur ÇOKYİĞİT | All rights reserved.</p>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var current = window.location.pathname.split("/").pop();
+
+            $('.navbar a').each(function () {
+                var link = $(this).attr('href');
+                if (link === current) {
+                    $(this).addClass('active');
+                }
+            });
+        });
+
+
+
+        $(document).ready(function () {
+            $("main").css("opacity", 0);
+            $("main").animate({ opacity: 1 }, 500);
+
+            $(".navbar a").click(function (event) {
+                event.preventDefault();
+                var newLocation = this.href;
+
+                $("main").animate({ opacity: 0 }, 500, function () {
+                    window.location = newLocation;
+                });
+            });
+        });
+    </script>
 
 </body>
 

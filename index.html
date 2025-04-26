@@ -19,27 +19,64 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
+    <main>
 
-    <section class="about">
-        <div class="about-container">
-            <img src="imgs/profile.png" alt="Profile Photo" class="profile-pic">
-            <div class="about-text">
-                <h1>Hello, I'm Onur</h1>
-                <p class="tagline">Aspiring Backend Developer | Passionate about AI and Simulations</p>
-                <p>I am a 3rd-year Computer Engineering student at Ankara Yıldırım Beyazıt University. I am a
-                    team-oriented individual who can also demonstrate leadership skills when needed. I am particularly
-                    interested in innovative projects in the fields of web development, backend, and artificial
-                    intelligence. Thanks to various courses and projects, I have gained experience in multiple
-                    programming languages and continue to improve myself through continuous learning and curiosity. I
-                    follow technology trends closely and adopt a disciplined, open-minded, and solution-focused mindset.
-                    My goal is to contribute to impactful software projects both individually and collaboratively.</p>
+        <section class="about">
+            <div class="about-container">
+                <img src="imgs/profile.png" alt="Profile Photo" class="profile-pic">
+                <div class="about-text">
+                    <h1>Hello, I'm Onur</h1>
+                    <p class="tagline">Aspiring Backend Developer | Passionate about AI and Simulations</p>
+                    <p>I am a 3rd-year Computer Engineering student at Ankara Yıldırım Beyazıt University. I am a
+                        team-oriented individual who can also demonstrate leadership skills when needed. I am
+                        particularly
+                        interested in innovative projects in the fields of web development, backend, and artificial
+                        intelligence. Thanks to various courses and projects, I have gained experience in multiple
+                        programming languages and continue to improve myself through continuous learning and curiosity.
+                        I
+                        follow technology trends closely and adopt a disciplined, open-minded, and solution-focused
+                        mindset.
+                        My goal is to contribute to impactful software projects both individually and collaboratively.
+                    </p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+    </main>
+
 
     <footer>
         <p>&copy; 2025 Onur ÇOKYİĞİT | All rights reserved.</p>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var current = window.location.pathname.split("/").pop();
+
+            $('.navbar a').each(function () {
+                var link = $(this).attr('href');
+                if (link === current) {
+                    $(this).addClass('active');
+                }
+            });
+        });
+
+
+
+        $(document).ready(function () {
+            $("main").css("opacity", 0);
+            $("main").animate({ opacity: 1 }, 500);
+
+            $(".navbar a").click(function (event) {
+                event.preventDefault();
+                var newLocation = this.href;
+
+                $("main").animate({ opacity: 0 }, 500, function () {
+                    window.location = newLocation;
+                });
+            });
+        });
+    </script>
 
 </body>
 
